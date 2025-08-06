@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as faceapi from "face-api.js";
 import { useNavigate } from "react-router-dom";
-
+import './FaceID.css'
 function LoginFaceID() {
   const videoRef = useRef();
   const [status, setStatus] = useState("Камера іске қосылуда...");

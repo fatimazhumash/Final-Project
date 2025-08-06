@@ -1,18 +1,43 @@
-/* FaceID.css */
 .faceid-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.faceid-container button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #cc0000;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.faceid-container p {
-  margin-top: 10px;
+
+.faceid-container h2 {
+  margin-bottom: 20px;
   color: #333;
+}
+
+.faceid-container video {
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+.faceid-container button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.faceid-container button:hover {
+  background-color: #45a049;
+}
+
+.faceid-container p {
+  font-size: 14px;
+  color: #555;
 }

@@ -1,55 +1,57 @@
-// src/Messenger.js
-
+// Messenger.js
 import React, { useState } from 'react';
+import axios from 'axios';
 import './Messenger.css';
 
 function Messenger() {
-    // Хабарламалар тізімін сақтайтын күй (state)
-    const [messages, setMessages] = useState([]);
-    // Жаңа хабарламаның мәтінін сақтайтын күй
-    const [newMessage, setNewMessage] = useState('');
+  const [userInput, setUserInput] = useState('');
+  const [answer, setAnswer] = useState([]);
 
-    // Хабарлама жіберу функциясы
-    const sendMessage = (e) => {
-        // Беттің қайта жүктелмеуі үшін
-        e.preventDefault();
+  function ask() {
+    if (!userInput.trim()) return;
 
-        // Егер хабарлама бос болса, ештеңе істемейміз
-        if (newMessage.trim() === '') return;
+    axios.post(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAtOX-Yvymqz8ogViLD1EyzdqLPK85W3wQ`,
+      {
+        contents: [{ parts: [{ text: userInput + " Осы берілген текстті қыстарту керек" }] }]
+      },
+      {
+        headers: { 'Content-Type': 'application/json' }
+      }
+    )
+    .then(response => {
+      const reply = response.data.candidates?.[0]?.content?.parts?.[0]?.text;
+      setAnswer([...answer, { question: userInput, answer: reply }]);
+      setUserInput('');
+    })
+    .catch(error => console.error(error));
+  }
 
-        // Жаңа хабарламаны хабарламалар тізіміне қосу
-        const newMsg = {
-            id: Date.now(), // Әр хабарламаға бірегей ID беру
-            text: newMessage,
-            username: 'Мен', // Мысалға арналған қолданушы аты
-        };
-
-        setMessages(prevMessages => [...prevMessages, newMsg]);
-
-        // Хабарлама жіберілгеннен кейін, енгізу өрісін тазарту
-        setNewMessage('');
-    };
-
-    return (
-        <div className="messenger-container">
-            <div className="messages-list">
-                {messages.map(msg => (
-                    <div key={msg.id} className="message">
-                        <strong>{msg.username}:</strong> {msg.text}
-                    </div>
-                ))}
+  return (
+    <div className="chat-container">
+      <div className="chat-box">
+        {answer.map((item, index) => (
+          <div key={index}>
+            <div className="chat-bubble user">
+              <b>Сұрақ:</b> {item.question}
             </div>
-            <form onSubmit={sendMessage} className="message-form">
-                <input
-                    type="text"
-                    value={newMessage}
-                    onChange={(e) => setNewMessage(e.target.value)}
-                    placeholder="Хабарлама жіберіңіз..."
-                />
-                <button type="submit">Жіберу</button>
-            </form>
-        </div>
-    );
+            <div className="chat-bubble bot">
+              <b>Жауап:</b> {item.answer}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="input-area">
+        <input
+          type="text"
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+          placeholder="Сұрағыңызды жазыңыз..."
+        />
+        <button onClick={ask}>Жіберу</button>
+      </div>
+    </div>
+  );
 }
 
 export default Messenger;
