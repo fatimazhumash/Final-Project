@@ -1,0 +1,11 @@
+/* src/App.css */
+
+.main-container {
+  display: flex;
+  min-height: 100vh; 
+}
+
+.content-container {
+  flex-grow: 1; 
+  padding: 20px; 
+}

@@ -1,0 +1,70 @@
+/* Жалпы беттің стилі */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Auth контейнерінің стилі */
+.auth-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Тақырыптың стилі */
+.auth-container h2 {
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Форма инпуттарының стилі */
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; /* padding пен border-ді жалпы өлшемге қосу */
+  font-size: 16px;
+}
+
+/* Инпуттың фокустану кезіндегі стилі */
+.auth-container input:focus {
+  border-color: #25073c;
+  outline: none; /* Әдепкі фокус шеңберін алып тастау */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Батырманың стилі */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #511b80;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Батырманың үстіне курсорды апарғандағы стилі */
+.auth-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Қате туралы хабарламаның стилі */
+.error-message {
+  color: #110a1b;
+  margin-top: 10px;
+  font-size: 14px;
+}

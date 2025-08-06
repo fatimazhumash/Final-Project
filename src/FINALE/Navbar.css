@@ -1,0 +1,40 @@
+
+.navbar {
+  background-color: #333;
+  /* overflow: hidden; - бұл қажет емес, алып тастауға болады */
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  width: 200px; /* Енін 200px етіп, үлкейту */
+  padding-top: 20px; /* Жоғарыдан бос орын қосу */
+}
+ 
+.navbar a {
+  /* float: left; - алып тастаңыз */
+  text-align: left; /* Мәтінді солға тегістеу */
+  padding: 15px 20px; /* Сәл үлкенірек етіп өзгерту */
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Қаріп өлшемін үлкейту */
+  transition: background-color 0.3s; /* Өту анимациясын қосу */
+}
+
+/* Қалған стильдер өзгеріссіз қалуы мүмкін */
+.navbar a:hover {
+  background-color: #575757; /* Түсін сәл өзгерту */
+  color: white;
+}
+
+.navbar a.active {
+  background-color: #46086d;
+  color: white;
+} 
+
+/* Иконкалардың стилі */
+.navbar a i {
+  margin-right: 15px; /* Иконка мен мәтіннің арасындағы бос орынды үлкейту */
+}
+
+
+
+

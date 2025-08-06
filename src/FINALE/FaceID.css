@@ -1,0 +1,18 @@
+/* FaceID.css */
+.faceid-container {
+  text-align: center;
+  margin-top: 40px;
+}
+.faceid-container button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.faceid-container p {
+  margin-top: 10px;
+  color: #333;
+}
