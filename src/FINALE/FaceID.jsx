@@ -8,42 +8,46 @@ function FaceID() {
   const [status, setStatus] = useState("Камера іске қосылуда...");
   const navigate = useNavigate();
 
-  // Модельдерді жүктеу
   const loadModels = async () => {
-    const MODEL_URL = "/models"; // public/models ішінде
+    const MODEL_URL = "/models";
     setStatus("Face ID модельдері жүктелуде...");
 
-    await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
-    await faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL);
-    await faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL);
-
-    startVideo();
+    try {
+      await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
+      await faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL);
+      await faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL);
+      startVideo();
+    } catch (err) {
+      console.error("Модель жүктеу қатесі:", err);
+      setStatus("Модельдерді жүктеу мүмкін болмады.");
+    }
   };
 
-  // Камераны қосу
   const startVideo = () => {
-    navigator.mediaDevices
-      .getUserMedia({ video: true })
-      .then((stream) => {
-        videoRef.current.srcObject = stream;
-        setStatus("Камера іске қосылды. Бетіңізді камераға қаратыңыз.");
-      })
-      .catch((err) => {
-        console.error(err);
-        setStatus("Камераға қол жеткізу мүмкін емес.");
-      });
+    if (navigator.mediaDevices?.getUserMedia) {
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then((stream) => {
+          videoRef.current.srcObject = stream;
+          setStatus("Камера іске қосылды. Бетіңізді камераға қаратыңыз.");
+        })
+        .catch((err) => {
+          console.error("Камера қатесі:", err);
+          setStatus("Камераға қол жеткізу мүмкін емес.");
+        });
+    } else {
+      setStatus("Бұл құрылғы камераны қолдамайды.");
+    }
   };
 
-  // Бетті тану
   const handleDetectFace = async () => {
-    const detections = await faceapi.detectSingleFace(
+    const result = await faceapi.detectSingleFace(
       videoRef.current,
       new faceapi.TinyFaceDetectorOptions()
     );
 
-    if (detections) {
+    if (result) {
       setStatus("Бет табылды. Кіру сәтті өтті!");
-      // Мұнда логика: токен сақтау, навигация, т.б.
       localStorage.setItem("userToken", "face-id-auth");
       setTimeout(() => navigate("/home"), 1500);
     } else {
