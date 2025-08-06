@@ -46,10 +46,7 @@ function Register() {
     }
   };
 
-  // 🔵 Face ID арқылы тіркелу функциясы
-  const handleFaceIdRegister = () => {
-    navigate("/faceid"); // Мысалы, Face ID компонентіне бағыттау
-  };
+
 
   return (
     <div className="auth-container">
@@ -76,10 +73,9 @@ function Register() {
         <button type="submit">Тіркелу</button>
       </form>
 
-      {/* ➕ Face ID батырмасы */}
-      <button onClick={handleFaceIdRegister} className="faceid-btn">
-        Face ID арқылы тіркелу
-      </button>
+   <button onClick={() => navigate("/registerfaceid")}>
+  Face ID арқылы тіркелу
+</button>
 
       {/* 🔁 Логин бетіне өту батырмасы */}
       <p className="login-redirect">

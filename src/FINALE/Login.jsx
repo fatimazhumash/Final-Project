@@ -59,6 +59,10 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)} 
         />
         <button type="submit">Login</button>
+        <button onClick={() => navigate("/loginfaceid")}>
+  Face ID арқылы кіру
+</button>
+
       </form>
       {error && <p className="error-message">{error}</p>}
     </div>

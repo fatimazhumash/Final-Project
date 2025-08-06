@@ -10,12 +10,13 @@ import Videos from "./Videos";
 import Musics from "./Musics";
 import Register from "./Register";
 import Login from "./Login";
-import FaceID from './FaceID'
+import LoginFaceId from "./LoginFaceId";
 import "./App.css"; 
+import RegisterFaceId from "./RegisterFaceId";
 
 function App() {
   const location = useLocation();
-  const hideNavbar = location.pathname === "/" || location.pathname === "/login" || location.pathname==='/faceid';
+  const hideNavbar = location.pathname === "/" || location.pathname === "/login" || location.pathname==='/loginfaceid' || location.pathname=='/registerfaceid';
 
   return (
     <div className="main-container">
@@ -31,7 +32,8 @@ function App() {
           <Route path="/games" element={<Games />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/musics" element={<Musics />} />
-          <Route path="/faceid" element={<FaceID/>}/>
+          <Route path="/registerfaceid" element={<RegisterFaceId/>}/>
+          <Route path="/loginfaceid" element={<LoginFaceId/>}/>
         </Routes>
       </div>
     </div>
