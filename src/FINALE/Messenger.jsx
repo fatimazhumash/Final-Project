@@ -13,7 +13,7 @@ function Messenger() {
     axios.post(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAtOX-Yvymqz8ogViLD1EyzdqLPK85W3wQ`,
       {
-        contents: [{ parts: [{ text: userInput + " Осы берілген текстті қыстарту керек" }] }]
+        contents: [{ parts: [{ text: userInput + "Берілген сұрақтарға жауап беру" }] }]
       },
       {
         headers: { 'Content-Type': 'application/json' }
