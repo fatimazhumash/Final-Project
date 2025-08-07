@@ -1,5 +1,14 @@
 /* src/Games.css */
 
+.clasGame {
+  margin: 100px auto; /* Жоғарғы және төменгі жағынан 100px, орталау үшін auto */
+  max-width: 1200px;  /* Ең көп ені */
+  padding: 20px;      /* Ішкі бос орын */
+  background-color: #ffffff; /* Ақ фон */
+  border-radius: 16px; /* Жұмыр бұрыштар */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Жұмсақ көлеңке */
+}
+
 h4 {
   text-align: center;
   margin-bottom: 20px;

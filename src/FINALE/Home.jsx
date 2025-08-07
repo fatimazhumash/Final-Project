@@ -6,6 +6,11 @@ function Home (){
         <div>
       <GameVideoNav/>
          
+      <div className="top-nav">
+        <Link to="/games" className="top-nav-link">Games</Link>
+        <Link to="/videos" className="top-nav-link">Cartoons</Link>
+        <Link to="/musics" className="top-nav-link">Musics</Link>
+      </div>
         </div>
     )
 }export default Home

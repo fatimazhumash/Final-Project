@@ -1,4 +1,4 @@
-/* Messenger.css */
+/* 
 
 .chat-container {
   max-width: 600px;
@@ -65,4 +65,53 @@
 
 .input-area button:hover {
   background-color: #0056b3;
+} */
+
+
+
+
+
+
+
+
+
+
+
+.messenger {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+.chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.message {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+.message.bot {
+  background: #f1f1f1;
+}
+.msg-actions button {
+  margin: 3px;
+}
+.reactions span {
+  margin-right: 5px;
+}
+.input-area {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+.filters {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 5px;
+}
+.pinned {
+  color: red;
+  font-weight: bold;
 }

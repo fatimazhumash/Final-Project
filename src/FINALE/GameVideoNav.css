@@ -1,9 +1,9 @@
-/* src/GameVideoNav.css */
+/* src/GameVideoNav.css
 
 .game-video-nav {
   display: flex;
   justify-content: center; /* Ссылкилерді ортаға тегістеу */
-  background-color: #333; /* Артқы фон түсі */
+  /* background-color: #333; 
   padding: 10px;
   margin-left: 55px;
   border-radius: 8px;
@@ -27,4 +27,46 @@
 
 .game-video-nav .nav-link:hover {
   background-color: #575757;
+} */ 
+ .game-video-nav {
+  display: flex;
+  justify-content: center;           /* Сілтемелерді ортаға орналастыру */
+  background-color: #333;            /* Қара-сұр фон */
+  padding: 10px 20px;                /* Ішкі бос орын */
+  border-radius: 12px;               /* Жұмыр бұрыштар */
+  margin: 20px auto;                 /* Ортасына орналастыру */
+  max-width: 1000px;                 /* Ең үлкен ені */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Көлеңке */
+  position: sticky;                  /* Үстінде тұру үшін */
+  top: 10px;                         /* Үстінен 10px төмен */
+  z-index: 1000;                     /* Басқа элементтер үстінде тұру үшін */
+}
+
+.game-video-nav .nav-link {
+  text-decoration: none;
+  color: #fff;                       /* Ақ түсті мәтін */
+  font-weight: 600;                  /* Қалыңырақ жазу */
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.game-video-nav .nav-link:hover {
+  background-color: #575757;         /* Ховер эффект */
+}
+
+/* 🔁 Адаптивтілік үшін */
+@media (max-width: 768px) {
+  .game-video-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+
+  .game-video-nav .nav-link {
+    margin: 8px 0;
+    width: 80%;
+    text-align: center;
+  }
 }
