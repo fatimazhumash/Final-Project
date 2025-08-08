@@ -3,9 +3,9 @@
   background-color: #333;
   /* overflow: hidden; - бұл қажет емес, алып тастауға болады */
   display: flex;
-  flex-direction: column; 
+  flex-direction: row; 
   justify-content: flex-start;
-  width: 200px; /* Енін 200px етіп, үлкейту */
+  width: 900px; /* Енін 200px етіп, үлкейту */
   padding-top: 20px; /* Жоғарыдан бос орын қосу */
 }
  

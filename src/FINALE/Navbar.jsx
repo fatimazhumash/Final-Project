@@ -7,6 +7,7 @@ function Navbar() {
   return (
     <div className="navbar">
   
+  
       <Link to="/home" className="active">
         <i className=" fa-home"></i> Home
       </Link>
@@ -17,9 +18,9 @@ function Navbar() {
       </Link>
 
      
-      <Link to="/messenger">
+      {/* <Link to="/messenger">
         <i className="fa-messenger"></i> Messenger
-      </Link>
+      </Link> */}
 
     
       <Link to="/profile">

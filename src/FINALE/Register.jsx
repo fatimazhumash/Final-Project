@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "Register.css"
 import { useNavigate } from "react-router-dom";
+import "./LogReg.css"
 
 function Register() {
   const [name, setName] = useState("");
