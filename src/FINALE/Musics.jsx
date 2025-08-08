@@ -88,7 +88,7 @@
 
 
 import React, { useState } from 'react';
-import GameVideoNav from './GameVideoNav';
+
 
 function Musics() {
   const [query, setQuery] = useState('');
@@ -102,7 +102,7 @@ function Musics() {
 
   return (
     <div style={{ padding: 20 }}>
-      <GameVideoNav/>
+     
       <h2>🎶 Музыка іздеу (Deezer API)</h2>
       <input
         type="text"

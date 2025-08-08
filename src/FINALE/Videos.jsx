@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './Videos.css'; // Стиль файлын импорттау
-import GameVideoNav from './GameVideoNav';
+
 
 // Видеолардың тізімі
 const videoList = [
@@ -15,7 +15,7 @@ const videoList = [
 function Videos() {
   return (
     <div className="videos-container">
-        <GameVideoNav/>
+      
       <h4></h4>
       {videoList.map((videoUrl, index) => (
         <div key={index} className="video-card">

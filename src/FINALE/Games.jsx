@@ -1,16 +1,27 @@
 import React from 'react';
 import './Games.css'; // стиль қосқың келсе, осындай файл қос
-import GameVideoNav from './GameVideoNav';
+
 
 function Games() {
   return (
     <div>
-        <GameVideoNav/>
-
+    
+  <div className='game' style={{}}> 
+         <p>all games</p>
+         <p> new games </p>
+         <p>popular </p>
+         <h3>all cotegories</h3>
+         <p> card</p>
+         <p>car</p>
+         <p>...</p>
+       </div>
+       
 
         <div className='clasGame'>
        <h4>Рекомендованные игры:</h4>
-       
+
+
+     
     <div className="games-container">
    
   {/* 1 */}
@@ -53,7 +64,7 @@ function Games() {
           rel="noopener noreferrer"
         >
           <img
-            src="https://yandex.kz/images/search?pos=10&from=tabbar&img_url=https%3A%2F%2Ffast.startgamer.ru%2Fi%2Fimages%2F31254%2Forigin%2Fgame_31254_65868e07526b1.jpg&text=Red+Ball+4+img&rpt=simage&lr=162"
+            src="https://avatars.mds.yandex.net/i?id=d5e08a2cee9ac80e9a801187c3fd5c39990de702-5905147-images-thumbs&n=13"
             alt="Red Ball 4
 "
             className="game-image"
@@ -70,7 +81,7 @@ function Games() {
           rel="noopener noreferrer"
         >
           <img
-            src=""
+            src="https://avatars.mds.yandex.net/i?id=67d1564397c258f2cb1a84f3c85c15e3299be5d9-5886829-images-thumbs&n=13"
             alt="Геометри Даш: Волна Челлендж"
             className="game-image"
           />
@@ -85,7 +96,7 @@ function Games() {
           rel="noopener noreferrer"
         >
           <img
-            src="https://yandex.kz/images/search?pos=1&img_url=https%3A%2F%2Fpic.rutubelist.ru%2Fvideo%2F2024-11-26%2Fb9%2F14%2Fb9145db811d554d776d1eb0a580a1955.jpg%3Fsize%3Dl&text=ГТАРП%3A+Дрифт+на+BMW+M5+F90&rpt=simage&lr=162"
+            src="https://avatars.mds.yandex.net/i?id=d13d56d8ea0770160c9702d1b81e7961671c14dc-5605720-images-thumbs&n=13s"
             alt="ГТАРП: Дрифт на BMW M5 F90"
             className="game-image"
           />
@@ -100,7 +111,7 @@ function Games() {
           rel="noopener noreferrer"
         >
           <img
-            src="https://yandex.kz/images/search?text=дурак+переводной&pos=4&rpt=simage&img_url=https%3A%2F%2Favatars.mds.yandex.net%2Fget-games%2F11385414%2F2a0000018dadc08490ac2dc89a413b4c17fa%2Fpjpg256x256&from=tabbar&lr=162"
+            src="https://avatars.mds.yandex.net/i?id=648cbcb082cc24fca5143eae7ef58c26c7187337-13583247-images-thumbs&n=13s"
             alt="Дурак переводной"
             className="game-image"
           />
@@ -115,7 +126,7 @@ function Games() {
           rel="noopener noreferrer"
         >
           <img
-            src="https://yandex.kz/images/search?text=5+nights+at+freddy%27s&pos=2&rpt=simage&img_url=https%3A%2F%2Fimages-wixmp-ed30a86b8c4ca887773594c2.wixmp.com%2Ff%2Fbc0df4bd-cbff-49cf-a350-661c428f82b3%2Fdftokf8-d4bd64fa-59b3-4774-9abc-b531a9ee4a47.png%2Fv1%2Ffill%2Fw_1229%2Ch_650%2Cq_70%2Cstrp%2Ffnaf_movie_by_mnstrfrc_dftokf8-pre.jpg%3Ftoken%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwMCIsInBhdGgiOiJcL2ZcL2JjMGRmNGJkLWNiZmYtNDljZi1hMzUwLTY2MWM0MjhmODJiM1wvZGZ0b2tmOC1kNGJkNjRmYS01OWIzLTQ3NzQtOWFiYy1iNTMxYTllZTRhNDcucG5nIiwid2lkdGgiOiI8PTE4OTAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.FzlxEw2grUq2E-CG3sD_prS9Zct0A8sVB2d_fi3Ja58&from=tabbar&lr=162"
+            src="https://avatars.mds.yandex.net/i?id=f7503ae113fdc650fc6879709fac8aee6206c8a7-4666607-images-thumbs&n=13"
             alt="Пять Ночей у Фредди"
             className="game-image"
           />
@@ -130,7 +141,7 @@ function Games() {
           rel="noopener noreferrer"
         >
           <img
-            src="https://yandex.kz/images/search?text=Block+Dropping+Merge&pos=1&rpt=simage&img_url=https%3A%2F%2Ffreegamesfreegames.com%2Fassets%2Fgames%2Fq2c4x2r2z244%2Ficon.webp&from=tabbar&lr=162"
+            src="https://avatars.mds.yandex.net/i?id=79473a117a0565709a7dfdc8bc9e7a9c099159d7-5879907-images-thumbs&n=13"
             alt="Block Dropping Merge"
             className="game-image"
           />

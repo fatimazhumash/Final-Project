@@ -1,11 +1,10 @@
-/* Home.css */
+/* 
 
 .top-nav {
   display: flex;
-  flex-direction: row;           /* Элементтер көлденең орналасады */
-  justify-content: flex-start;   /* Сол жаққа жабыстырып орналастыру */
-  padding: 10px;
-  background-color: #444;        /* Артқы фон түсі */
+  flex-direction: row;          
+  justify-content: flex-start;   
+  background-color: #444;      
   border-radius: 8px;
   margin: 20px 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -24,4 +23,69 @@
 .top-nav-link:hover {
   background-color: #666;
   transform: scale(1.05);
+} */
+
+
+
+
+
+
+
+
+
+
+.home {
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.home-section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 12px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 100px;
+  object-fit: cover;
+}
+
+button {
+  background: transparent;
+  border: 1px solid var(--text-color);
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+button:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
 }

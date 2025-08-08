@@ -91,7 +91,8 @@ function Messenger() {
       const response = await axios.post(
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAtOX-Yvymqz8ogViLD1EyzdqLPK85W3wQ`,
         {
-          contents: [{ parts: [{ text: userInput }] }]
+          contents: [{ parts: [{ text: userInput +   "" + "Я могу только задавать вопросы про AllOne"+"AllOne это развликательный сайт"+" В AllOne вы можете играть, смотреть кино или мультик даже можете послушать свою любимую музыку "
+    }] }]
         },
         {
           headers: { 'Content-Type': 'application/json' }

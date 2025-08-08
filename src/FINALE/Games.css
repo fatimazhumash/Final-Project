@@ -1,12 +1,12 @@
 /* src/Games.css */
-
+/* 
 .clasGame {
-  margin: 100px auto; /* Жоғарғы және төменгі жағынан 100px, орталау үшін auto */
-  max-width: 1200px;  /* Ең көп ені */
-  padding: 20px;      /* Ішкі бос орын */
-  background-color: #ffffff; /* Ақ фон */
-  border-radius: 16px; /* Жұмыр бұрыштар */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Жұмсақ көлеңке */
+  margin: 100px auto; 
+  max-width: 1200px; 
+  padding: 20px;     
+  background-color: #ffffff; 
+  border-radius: 16px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
 }
 
 h4 {
@@ -17,7 +17,7 @@ h4 {
 
 .games-container {
   display: grid;
-  /* Әрбір бағанның ені 200px-тен кем болмауын қамтамасыз ететін адаптивті тор */
+
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
   padding: 20px;
@@ -34,15 +34,15 @@ h4 {
 }
 
 .game-card:hover {
-  /* Карта үстіне курсорды апарғанда сәл үлкейеді */
+
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .game-image {
   width: 100%;
-  height: 150px; /* Суреттің биіктігін бірдей етіп орнату */
-  object-fit: cover; /* Суреттің пропорциясын сақтап, бос орынды толтыру */
+  height: 150px; 
+  object-fit: cover; 
   border-bottom: 1px solid #ddd;
 }
 
@@ -60,4 +60,99 @@ h4 {
   color: inherit;
 }
 .clasGame{
-  margin: 100px;}
+  margin: 100px;} */
+
+
+
+
+
+
+
+
+
+/* Категория панелі */
+.game {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.game p,
+.game h3 {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.game p:hover {
+  color: #ff4040;
+}
+
+/* Ойын контенті */
+.clasGame {
+  margin-left: 220px; /* sidebar көлемі + бос орын */
+  padding: 20px;
+}
+
+/* Контейнер */
+.games-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Ойын карточкасы */
+.game-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+}
+
+.game-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.game-title {
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Адаптивтілік */
+@media (max-width: 768px) {
+  .game {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .clasGame {
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+  .games-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
