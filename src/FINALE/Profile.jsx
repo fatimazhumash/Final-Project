@@ -95,16 +95,17 @@ function Profile() {
   };
 
   // Картада көрсетілетін орын
-  const place = {
-    name: "Астана",
-    region: "Астана қаласы",
-    description: "Қазақстан астанасы. Саяси, мәдени және іскерлік орталық.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Astana_day.jpg/800px-Astana_day.jpg",
+    const place = {
+    name: "Алматы",
+    region: "Алматы қаласы",
+    description: "Қазақстанның ең ірі қаласы, мәдени және қаржы орталығы.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Almaty_Mountains.jpg/800px-Almaty_Mountains.jpg",
     coordinates: {
-      lat: 51.1605,
-      lng: 71.4704
+      lat: 43.2389,
+      lng: 76.8897
     }
   };
+
 
   return (
     <div className="profile-container">

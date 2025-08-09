@@ -3,17 +3,19 @@ import './Games.css'; // стиль қосқың келсе, осындай фа
 
 
 function Games() {
+    
   return (
     <div>
     
   <div className='game' style={{}}> 
-         <p>all games</p>
-         <p> new games </p>
-         <p>popular </p>
-         <h3>all cotegories</h3>
-         <p> card</p>
-         <p>car</p>
-         <p>...</p>
+        
+        <h3>Категориялар</h3>
+          <div className="game-type"> Карта</div>
+        <div className="game-type"> Машина</div>
+        <div className="game-type"> RPG</div>
+        <div className="game-type">FPS</div>
+        <div className="game-type"> Басқатырғыш</div>
+        <div className="game-type"> Аркада</div>
        </div>
        
 
@@ -155,3 +157,7 @@ function Games() {
 }
 
 export default Games;
+
+
+
+

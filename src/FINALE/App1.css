@@ -1,53 +1,36 @@
-/* 
+/* Толық экранды алу үшін қажет */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+/* Негізгі контейнер */
 .main-container {
   display: flex;
-  min-height: 100vh; 
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0d0d0d;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Контент */
 .content-container {
-  flex-grow: 1; 
-  padding: 20px; 
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-
-
-
-/* src/App.css */
-
-/* body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-} */
-
-/* Навбарға орын қалдыру үшін */
-/* @media (max-width: 768px) {
-  .content-container {
-    padding: 15px;
-    padding-top: 70px;
-  }
-}  */
-
-
-/* Жалпы фон және шрифт */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #0d0d0d; /* Қара фон */
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Навбар */
+/* Навигация */
 .navbar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #1a1a1a; /* Қаралау фон */
+  background-color: #1a1a1a;
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
@@ -56,7 +39,7 @@ body {
 }
 
 .navbar a {
-  color: #b388ff; /* Күлгін түсті иконка немесе текст */
+  color: #b388ff;
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
@@ -69,7 +52,7 @@ body {
 /* Бөлімдер */
 .section {
   padding: 20px;
-  margin-bottom: 70px; /* Навбармен жабылып қалмау үшін */
+  margin-bottom: 70px;
 }
 
 /* Батырма */
@@ -87,7 +70,7 @@ button:hover {
   background-color: #9575cd;
 }
 
-/* Input (іздеу, логин, тіркелу) */
+/* Input */
 input {
   background-color: #2e2e2e;
   color: white;
@@ -95,13 +78,14 @@ input {
   padding: 10px;
   border-radius: 8px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 input::placeholder {
   color: #999;
 }
 
-/* Card-style (контенттерге) */
+/* Card */
 .card {
   background-color: #1f1f1f;
   border-radius: 16px;
@@ -120,26 +104,17 @@ input::placeholder {
   max-width: 70%;
 }
 
-/* Right side message */
 .message.right {
   background-color: #7e57c2;
   margin-left: auto;
 }
 
-/* Left side message */
 .message.left {
   background-color: #4a148c;
   margin-right: auto;
 }
 
-
-
-
-
-
-
-
-/* Footer стайлдары */
+/* Footer */
 .app-footer {
   background-color: #1a1a1a;
   color: white;
@@ -148,6 +123,8 @@ input::placeholder {
   border-top: 2px solid #928586;
   margin-top: 40px;
   border-radius: 20px 20px 0 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .app-footer h1 {
@@ -201,7 +178,18 @@ input::placeholder {
   line-height: 1.6;
 }
 
-/* Адаптивтілік */
+/* Dark / Light Mode */
+.dark-mode {
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.light-mode {
+  background-color: #f4f4f4;
+  color: black;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .app-footer {
     padding: 20px 10px;

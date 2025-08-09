@@ -1,5 +1,5 @@
 /* src/Videos.css */
-
+/* 
 .videos-container {
   display: flex;
   flex-direction: column;
@@ -22,4 +22,83 @@
   width: 100%;
   height: auto;
   display: block;
+} */
+
+
+
+
+
+
+
+.cartoon-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+.cartoon-sidebar p,
+.cartoon-sidebar h3 {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.cartoon-sidebar p:hover {
+  color: #ff4081;
+}
+
+.cartoon-main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.cartoon-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.cartoon-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+.cartoon-card:hover {
+  transform: scale(1.05);
+}
+
+.cartoon-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.cartoon-title {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Адаптивтілік */
+@media (max-width: 768px) {
+  .cartoon-sidebar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cartoon-main {
+    margin-left: 0;
+    padding-top: 10px;
+  }
 }

@@ -1,0 +1,50 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Профильден жоғары болуы үшін */
+}
+
+.modal-content {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.modal-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.map-box {
+  margin-top: 15px;
+}
+
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #ff5555;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.close-btn:hover {
+  background-color: #ff3333;
+}
