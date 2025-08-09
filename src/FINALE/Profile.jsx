@@ -97,12 +97,12 @@ function Profile() {
   // Картада көрсетілетін орын
     const place = {
     name: "Алматы",
-    region: "Алматы қаласы",
-    description: "Қазақстанның ең ірі қаласы, мәдени және қаржы орталығы.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Almaty_Mountains.jpg/800px-Almaty_Mountains.jpg",
+    region: "Алматы қаласы ",
+    description: "​Алмалинский район, , Улица Мауленова ,92.",
+    image: "https://2gis.kz/almaty/geo/9430047375018127",
     coordinates: {
-      lat: 43.2389,
-      lng: 76.8897
+      lat: 43.251588,
+      lng:  76.935242,
     }
   };
 

@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import "./Modal.css"; // Сыртқы стиль қосу
+import "./Modal.css"; 
 
 function Modal({ show, onClose, place }) {
   if (!show || !place) return null;
