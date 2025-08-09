@@ -123,7 +123,7 @@ function Videos() {
 
   return (
     <div className="cartoon-wrapper">
-      <div className="cartoon-sidebar">
+      <div className="cartoon-sidebar" style={{margin:"10px"}}>
         <h3>Категориялар</h3>
         <p onClick={() => setSelectedCategory('all')}>Барлығы</p>
         <p onClick={() => setSelectedCategory('kaz')}>Қазақша</p>
