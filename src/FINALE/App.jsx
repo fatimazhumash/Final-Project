@@ -312,7 +312,7 @@ function App() {
 <div className="footer" style={{borderWidth:"400px",borderColor:"white"}} >
  {!hideNavbar && (
         <footer className="app-footer">
-          <h1>AllOne</h1>
+          <div className="Ao-fot"><h1>AllOne</h1>
           <button
             className="follow-btn"
             style={{
@@ -322,15 +322,16 @@ function App() {
             onClick={toggleFollow}
           >
             {followed ? "Unfollow" : "Follow"}
-          </button>
-          <h4><img src="https://avatars.mds.yandex.net/i?id=2b393ffd998e40dd2f511ae24ad4ce10bb472c82-6432328-images-thumbs&n=13" alt="help" style={{width:"50px",borderRadius:"20px"}}/> <a href="/help">Help</a></h4>
+          </button> </div>
+          <div className="link-fot"> <h4><img src="https://avatars.mds.yandex.net/i?id=2b393ffd998e40dd2f511ae24ad4ce10bb472c82-6432328-images-thumbs&n=13" alt="help" style={{width:"50px",borderRadius:"20px"}}/> <a href="/help">Help</a></h4>
           <h4><img src="https://avatars.mds.yandex.net/i?id=25bec0d30cd797d3e7240d4fde72333f12280c3c-8275014-images-thumbs&n=13" alt="about"  style={{width:"50px",borderRadius:"20px"}}/><a href="/about"> About</a></h4>
-          <h4><img src="https://avatars.mds.yandex.net/i?id=b7bc9f002b6675f2649bb4f2fb32ae15837c75c2-4555798-images-thumbs&n=13" alt="We.re"  style={{width:"50px",borderRadius:"20px"}}/><a href="/messenger">We.re</a></h4>
-          <p>
+          <h4><img src="https://avatars.mds.yandex.net/i?id=b7bc9f002b6675f2649bb4f2fb32ae15837c75c2-4555798-images-thumbs&n=13" alt="We.re"  style={{width:"50px",borderRadius:"20px"}}/><a href="/messenger">We.re</a></h4> </div>
+         <div>  <p>
             © 2025 <p style={{color:"purple"}}>AmjiltCuperSchool</p> 
             Kazakhstan, Almaty <br />
             <a href="https://2gis.kz/almaty/geo/9430047375018127" target="_blank" rel="noreferrer">Maulenova 92</a>
-          </p>
+          </p></div>
+         
         </footer>
       )}
 </div >
