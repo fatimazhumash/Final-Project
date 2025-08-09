@@ -11,6 +11,7 @@ import './Musics.css';
     url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
     image: 'https://avatars.mds.yandex.net/i?id=0c26a853735a5b5475273d512924aded33478be8-3308358-images-thumbs&n=13',
     category: 'kaz',
+    musik:'/models/music/music1.mp3'
   },
   {
     title: 'Ayau - Sybyrlain',
@@ -137,6 +138,7 @@ function Musics() {
           {filteredMusic.map((song, index) => (
             <div className="music-card" key={index}>
               <img src={song.image} alt={song.title} className="music-image" style={{width:"100px",height:"100px"}} />
+             <iframe src={song.musik} frameborder="0"></iframe>
               <p className="music-title">{song.title}</p>
               <audio controls className="music-player">
                 <source src={song.url} type="audio/mp3" />
