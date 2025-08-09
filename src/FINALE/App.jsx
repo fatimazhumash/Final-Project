@@ -260,8 +260,11 @@ import LoginFaceId from "./LoginFaceId";
 import RegisterFaceId from "./RegisterFaceId";
 import NotFound from "./NotFound";
 import GameVideoNav from "./GameVideoNav";
+import About from "./About";
+import Help from "./Help";
 
 import "./App.css";
+
 
 function App() {
   const location = useLocation();
@@ -306,35 +309,67 @@ function App() {
           <Route path="/registerfaceid" element={<RegisterFaceId />} />
           <Route path="/loginfaceid" element={<LoginFaceId />} />
           <Route path="*" element={<NotFound />} />
+           <Route path="about" element={<About />} />
+            <Route path="help" element={<Help/>} />
+          
         </Routes>
       </div>
 
-<div className="footer" style={{borderWidth:"400px",borderColor:"white"}} >
- {!hideNavbar && (
-        <footer className="app-footer">
-          <div className="Ao-fot"><h1>AllOne</h1>
-          <button
-            className="follow-btn"
-            style={{
-              backgroundColor: followed ? "white" : "#ff3b3b",
-              color: followed ? "#ff3b3b" : "white",
-            }}
-            onClick={toggleFollow}
-          >
-            {followed ? "Unfollow" : "Follow"}
-          </button> </div>
-          <div className="link-fot"> <h4><img src="https://avatars.mds.yandex.net/i?id=2b393ffd998e40dd2f511ae24ad4ce10bb472c82-6432328-images-thumbs&n=13" alt="help" style={{width:"50px",borderRadius:"20px"}}/> <a href="/help">Help</a></h4>
-          <h4><img src="https://avatars.mds.yandex.net/i?id=25bec0d30cd797d3e7240d4fde72333f12280c3c-8275014-images-thumbs&n=13" alt="about"  style={{width:"50px",borderRadius:"20px"}}/><a href="/about"> About</a></h4>
-          <h4><img src="https://avatars.mds.yandex.net/i?id=b7bc9f002b6675f2649bb4f2fb32ae15837c75c2-4555798-images-thumbs&n=13" alt="We.re"  style={{width:"50px",borderRadius:"20px"}}/><a href="/messenger">We.re</a></h4> </div>
-         <div>  <p>
-            © 2025 <p style={{color:"purple"}}>AmjiltCuperSchool</p> 
-            Kazakhstan, Almaty <br />
-            <a href="https://2gis.kz/almaty/geo/9430047375018127" target="_blank" rel="noreferrer">Maulenova 92</a>
-          </p></div>
-         
-        </footer>
-      )}
-</div >
+<div className="footer">
+  {!hideNavbar && (
+    <footer className="app-footer">
+   
+      <div className="footer-left">
+        <h1>AllOne</h1>
+        <button
+          className="follow-btn"
+          style={{
+            backgroundColor: followed ? "white" : "#ff3b3b",
+            color: followed ? "#ff3b3b" : "white",
+          }}
+          onClick={toggleFollow}
+        >
+          {followed ? "Unfollow" : "Follow"}
+        </button>
+
+     
+        <div className="footer-copy" >
+          <p>© 2025 <span>AmjiltCuperSchool</span></p>
+          <p>Kazakhstan, Almaty</p>
+          <a href="https://2gis.kz/almaty/geo/9430047375018127" target="_blank" rel="noreferrer">
+            Maulenova 92
+          </a>
+        </div>
+      </div>
+
+      
+      <div className="footer-right">
+        <div className="footer-links">
+          <div className="imgl">
+            <h4>
+              <img src="https://avatars.mds.yandex.net/i?id=2b393ffd998e40dd2f511ae24ad4ce10bb472c82-6432328-images-thumbs&n=13" alt="help" />
+              <a href="/help">Help</a>
+            </h4>
+          </div>
+          <div className="imgl">
+            <h4>
+              <img src="https://avatars.mds.yandex.net/i?id=25bec0d30cd797d3e7240d4fde72333f12280c3c-8275014-images-thumbs&n=13" alt="about" />
+              <a href="/about">About</a>
+            </h4>
+          </div>
+          <div className="imgl">
+            <h4>
+              <img src="https://avatars.mds.yandex.net/i?id=b7bc9f002b6675f2649bb4f2fb32ae15837c75c2-4555798-images-thumbs&n=13" alt="We.re" />
+              <a href="/messenger">We.re</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )}
+</div>
+
+
     
     </div>
   );

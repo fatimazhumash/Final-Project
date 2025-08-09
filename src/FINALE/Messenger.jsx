@@ -62,6 +62,7 @@ function Messenger() {
   return (
     <div className="chat-container">
       <div className="chat-box">
+        <h4>Welcome ,I'll answer your questions</h4>
         {qaList.map((item, index) => (
           <div key={index}>
             <div className="chat-bubble user">

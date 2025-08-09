@@ -107,99 +107,74 @@ input::placeholder {
 
 
 
-/* Footer стайлдары */
-.app-footer {
-  background-color: #1a1a1a;
+
+
+
+
+
+.footer {
+  background-color: #222;
   color: white;
-  padding: 40px 20px;
-  text-align: center;
-  border-top: 2px solid #928586;
-  margin-top: 40px;
-  border-radius: 20px 20px 0 0;
+  padding: 20px 40px;
 }
 
-.app-footer h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.app-footer h4 {
+.app-footer {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 18px;
-  margin: 10px 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.app-footer a {
-  color: #9f09e5;
-  text-decoration: none;
+/* Сол жақ */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.app-footer a:hover {
-  text-decoration: underline;
-}
-
-.app-footer img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.footer-left h1 {
+  font-size: 28px;
+  margin: 0;
 }
 
 .follow-btn {
-  padding: 10px 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
   border: none;
-  border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
 }
 
-.follow-btn:hover {
-  opacity: 0.85;
-}
-
-.app-footer p {
+.footer-copy {
   font-size: 14px;
-  color: #ccc;
-  margin-top: 20px;
-  line-height: 1.6;
+
 }
 
-/* Адаптивтілік */
-@media (max-width: 600px) {
-  .app-footer {
-    padding: 20px 10px;
-  }
+.footer-copy span {
+  color: purple;
+}
 
-  .app-footer h1 {
-    font-size: 24px;
-  }
+/* Оң жақ */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
-  .app-footer h4 {
-    font-size: 16px;
-  }
+.footer-links {
+  display: flex;
+  gap: 25px;
+}
 
-  .follow-btn {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
+.footer-links img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 8px;
+}
 
-  .app-footer img {
-    width: 30px;
-    height: 30px;
-  }
-} 
-
-
-
- .Ao-fot{
-  margin-right: 500px;
- }
-.Link-fot{
-  margin-left: 500px;
-  margin-top: 400px;
+.footer-links h4 {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
 }
