@@ -1,29 +1,3 @@
-/* src/Videos.css */
-/* 
-.videos-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.video-card {
-  width: 100%;
-  max-width: 400x;
-  height: 500px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background-color: #000;
-}
-
-.video-player {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
-
 
 
 
@@ -87,9 +61,68 @@
   font-weight: bold;
   text-align: center;
 }
+.cartoon-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 110px;
+  height: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
 
-/* Адаптивтілік */
-@media (max-width: 768px) {
+.cartoon-sidebar p,
+.cartoon-sidebar h3 {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.cartoon-sidebar p:hover {
+  color: #ff4081;
+}
+
+.cartoon-main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.cartoon-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-right: 150px;
+}
+
+.cartoon-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+.cartoon-card:hover {
+  transform: scale(1.05);
+}
+
+.cartoon-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.cartoon-title {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+@media (max-width: 480px) {
   .cartoon-sidebar {
     position: relative;
     width: 100%;

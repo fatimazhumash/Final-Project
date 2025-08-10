@@ -140,16 +140,13 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
-import { DataGames } from "./DataGames"; // деректер қайтарушы функция немесе массив
+import { DataGames } from "./DataGames";
 
 function GamePage() {
   const { id } = useParams();
 
-  // Егер DataGames — массив болса
   const games = DataGames;
 
-  // Егер DataGames — функция болса, былай:
-  // const games = DataGames();
 
   const game = games.find((g) => g.id === Number(id));
 

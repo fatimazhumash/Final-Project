@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LogReg.css"
 
+
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

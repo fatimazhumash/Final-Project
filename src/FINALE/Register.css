@@ -1,4 +1,4 @@
-/* Жалпы беттің стилі */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-/* Auth контейнерінің стилі */
+
 .auth-container {
   background-color: #fff;
   padding: 40px;
@@ -26,18 +26,16 @@ body {
   color: #333;
 }
 
-/* Форма инпуттарының стилі */
 .auth-container input {
   width: 100%;
   padding: 12px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box; /* padding пен border-ді жалпы өлшемге қосу */
+  box-sizing: border-box; 
   font-size: 16px;
 }
 
-/* Инпуттың фокустану кезіндегі стилі */
 .auth-container input:focus {
   border-color: #25073c;
   outline: none; /* Әдепкі фокус шеңберін алып тастау */

@@ -1,6 +1,5 @@
 
 
-/* Жалпы фон және шрифт */
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Навбар */
 .navbar {
   position: fixed;
   bottom: 0;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Profile.css';
-import Modal from './Modal'; // Егер Modal бар болса
+import Modal from './Modal';
 
 const translations = {
   kk: {
@@ -165,7 +165,7 @@ function Profile() {
         </div>
       </div>
 
-      {/* Модал компоненті */}
+  
       <Modal show={!!selectedPlace} onClose={() => setSelectedPlace(null)} place={selectedPlace} />
     </div>
   );

@@ -3,7 +3,11 @@ import axios from "axios";
 
 function Messenger() {
   const [userInput, setUserInput] = useState("");
-  const [qaList, setQaList] = useState([]);
+  const [qaList, setQaList] = useState(() => {
+    // Браузерден сақталған чатты алу
+    const saved = localStorage.getItem("chatHistory");
+    return saved ? JSON.parse(saved) : [];
+  });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const chatEndRef = useRef(null);
@@ -16,6 +20,11 @@ function Messenger() {
     scrollToBottom();
   }, [qaList, loading]);
 
+  // qaList өзгерген сайын localStorage-ке сақтау
+  useEffect(() => {
+    localStorage.setItem("chatHistory", JSON.stringify(qaList));
+  }, [qaList]);
+
   const ask = async () => {
     if (!userInput.trim()) return;
     setLoading(true);
@@ -23,39 +32,37 @@ function Messenger() {
 
     try {
       const response = await axios.post(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAtOX-Yvymqz8ogViLD1EyzdqLPK85W3wQ", // Үтірсіз
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAtOX-Yvymqz8ogViLD1EyzdqLPK85W3wQ",
         {
-          // Мәтінді API-дің сұрау форматына сай жинау
           prompt: {
-            text: userInput + 
+            text:
+              userInput +
               " Я могу только задавать вопросы про AllOne. " +
               "AllOne — развлекательный сайт. " +
-              "В AllOne вы можете играть, смотреть кино или мультик, даже слушать музыку."
-          }
+              "В AllOne вы можете играть, смотреть кино или мультик, даже слушать музыку.",
+          },
         },
         {
-          headers: { "Content-Type": "application/json" }
+          headers: { "Content-Type": "application/json" },
         }
       );
 
-      // Нәтижені алу (құрылымы API нақтысына байланысты өзгеруі мүмкін)
       const reply =
-        response.data.candidates?.[0]?.content?.parts?.[0]?.text || "Жауап табылмады";
+        response.data.candidates?.[0]?.content?.parts?.[0]?.text ||
+        "Жауап табылмады";
 
       const now = new Date().toLocaleTimeString();
 
       setQaList((prev) => [
         ...prev,
-        {
-          question: userInput,
-          answer: reply,
-          time: now
-        }
+        { question: userInput, answer: reply, time: now },
       ]);
       setUserInput("");
     } catch (err) {
       console.error(err);
-      setError("Қате шықты. Интернетті тексеріңіз немесе кейінірек қайталап көріңіз.");
+      setError(
+        "Қате шықты. Интернетті тексеріңіз немесе кейінірек қайталап көріңіз."
+      );
     } finally {
       setLoading(false);
     }
@@ -71,14 +78,35 @@ function Messenger() {
     <div style={{ maxWidth: "600px", margin: "0 auto" }}>
       <h4>Welcome User</h4>
 
-      <div style={{ minHeight: "300px", border: "1px solid #ccc", padding: "10px", overflowY: "auto" }}>
+      <div
+        style={{
+          minHeight: "300px",
+          border: "1px solid #ccc",
+          padding: "10px",
+          overflowY: "auto",
+        }}
+      >
         {qaList.map((item, i) => (
           <div key={i}>
-            <div style={{ backgroundColor: "#d1e7dd", margin: "10px", padding: "10px", borderRadius: "8px" }}>
+            <div
+              style={{
+                backgroundColor: "#d1e7dd",
+                margin: "10px",
+                padding: "10px",
+                borderRadius: "8px",
+              }}
+            >
               <b>Сұрақ:</b> {item.question} <br />
               <small>{item.time}</small>
             </div>
-            <div style={{ backgroundColor: "#f8d7da", margin: "10px", padding: "10px", borderRadius: "8px" }}>
+            <div
+              style={{
+                backgroundColor: "#f8d7da",
+                margin: "10px",
+                padding: "10px",
+                borderRadius: "8px",
+              }}
+            >
               <b>Жауап:</b> {item.answer} <br />
               <small>{item.time}</small>
             </div>

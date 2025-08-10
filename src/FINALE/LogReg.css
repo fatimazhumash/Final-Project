@@ -1,4 +1,4 @@
-/* Жалпы беттің стилі */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
@@ -148,3 +148,16 @@ body {
     height: auto;
   }
 }
+/* @media (max-width: 500px) {
+  .logreg-box {
+    padding: 20px;
+  }
+  .logreg-box h2 {
+    font-size: 20px;
+  }
+  .logreg-box input, 
+  .logreg-box button {
+    font-size: 14px;
+    padding: 10px;
+  }
+} */

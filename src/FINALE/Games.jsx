@@ -1,8 +1,62 @@
+// import React, { useState } from 'react';
+// import './Games.css';
+
+// const allGames = [
+//    
+
+// ];
+
+// function Games() {
+// const [selectedCategory, setSelectedCategory] = useState('all');
+//   const [selectedGame, setSelectedGame] = useState(null);
+
+
+//   const categories = ['all', ...new Set(allGames.map(g => g.category))];
+
+//   const filteredGames =
+//     selectedCategory === 'all'
+//       ? allGames
+//       : allGames.filter(g => g.category === selectedCategory);
+
+//   return (
+//    <div className="games-container">
+   
+//       <div className="sidebar">
+//         {categories.map(cat => (
+//           <button
+//             key={cat}
+//             className={cat === selectedCategory ? 'active' : ''}
+//             onClick={() => setSelectedCategory(cat)}
+//           >
+//             {cat.toUpperCase()}
+//           </button>
+//         ))}
+//       </div>
+
+  
+//       <div className="games-list">
+//         {filteredGames.map((game, index) => (
+//           <iframe
+//             key={index}
+//             src={game.url}
+//             title={game.title}
+//             style={{ width: '600px', height: '400px', border: 'none' }}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Games;
+
+
+
 import React, { useState } from 'react';
 import './Games.css';
 
 const allGames = [
-   // 1 — .io Games
+  //1 — .io Games
   { id: 1, title: 'Krunker.io', url: 'https://krunker.io/', category: 'io' },
   { id: 2, title: 'Slither.io', url: 'https://slither.io/', category: 'io' },
   { id: 3, title: 'Diep.io', url: 'https://diep.io/', category: 'io' },
@@ -121,54 +175,50 @@ const allGames = [
   { id: 98, title: 'Tetris', url: 'https://tetris.com/play-tetris', category: 'puzzle' },
   { id: 99, title: 'Unblock Me', url: 'https://www.crazygames.com/game/unblock-me', category: 'puzzle' },
   { id: 100, title: 'Word Search', url: 'https://thewordsearch.com/', category: 'puzzle' },
-
+  
 ];
 
-function Games() {
-const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedGame, setSelectedGame] = useState(null);
-
-
-  const categories = ['all', ...new Set(allGames.map(g => g.category))];
+export default function Games() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const filteredGames =
     selectedCategory === 'all'
       ? allGames
-      : allGames.filter(g => g.category === selectedCategory);
+      : allGames.filter(game => game.category === selectedCategory);
+
+  const categories = ['all', 'io', 'action', 'adventure', 'arcade', 'board', 'card', 'racing', 'sports', 'strategy', 'puzzle'];
+
 
   return (
-   <div className="games-container">
-   
-      <div className="sidebar">
+    <div className="games-wrapper">
+      {/* Сол жақтағы категориялар */}
+      <div className="games-sidebar">
+        <h3>Категориялар</h3>
         {categories.map(cat => (
-          <button
+          <p
             key={cat}
-            className={cat === selectedCategory ? 'active' : ''}
             onClick={() => setSelectedCategory(cat)}
+            className={selectedCategory === cat ? 'active' : ''}
           >
-            {cat.toUpperCase()}
-          </button>
+            {cat}
+          </p>
         ))}
       </div>
 
-  
-      <div className="games-list">
-        {filteredGames.map((game, index) => (
-          <iframe
-            key={index}
-            src={game.url}
-            title={game.title}
-            style={{ width: '600px', height: '400px', border: 'none' }}
-          />
-        ))}
+      {/* Оң жақтағы ойындар */}
+      <div className="games-main">
+        <h4>Ұсынылған ойындар:</h4>
+        <div className="games-container">
+          {filteredGames.map((game, index) => (
+            <div className="games-card" key={index}>
+              <iframe src={game.url} title={game.title} allowFullScreen></iframe>
+              <p className="games-title">{game.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
-export default Games;
-
-
-
 
 

@@ -1,37 +1,113 @@
-
-
-.games-container {
+.games-wrapper {
   display: flex;
+  gap: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Кішкентай экранда автоматты оралу */
 }
 
-.categories {
-  width: 200px;
-  padding: 10px;
-  background: #222;
-  color: white;
+.games-sidebar {
+  width: 150px;
+  background-color: #282727;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.categories button {
-  padding: 8px;
-  border: none;
-  background: #444;
-  color: white;
+.games-sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.games-sidebar p {
+  margin: 0;
   cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.categories button.active {
-  background: red;
+.games-sidebar p:hover {
+  background-color: #ddd;
 }
 
-.games-list {
+.games-sidebar p.active {
+  background-color: #26104d;
+  color: white;
+  font-weight: bold;
+}
+
+.games-main {
   flex: 1;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.game-frame iframe {
-  width: 100%;
-  height: 500px;
+.games-main h4 {
+  margin-bottom: 15px;
 }
+
+.games-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.games-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px; /* Барлық карточка бірдей */
+}
+
+.games-card iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
+.games-title {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* 📱 Адаптация */
+@media (max-width: 900px) {
+  .games-wrapper {
+    flex-direction: column; /* Вертикалды */
+  }
+
+  .games-sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .games-sidebar p {
+    flex: 1 1 100px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .games-container {
+    grid-template-columns: 1fr; /* Бір бағана */
+  }
+
+  .games-card {
+    height: auto; /* Биіктігін икемді ету */
+  }
+}
+
