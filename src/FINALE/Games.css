@@ -67,7 +67,7 @@ h4 {
 
 
 
-.games-wrapper {
+/* .games-wrapper {
   display: flex;
   background-color: #121212;
   color: white;
@@ -133,4 +133,79 @@ h4 {
   font-size: 16px;
   text-align: center;
   color: white;
+} */
+
+
+
+
+
+
+
+
+/* .games-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 110px;
+  height: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+.games-sidebar p,
+.games-sidebar h3 {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.games-sidebar p:hover {
+  color: #ff4081;
+}
+
+
+
+
+
+
+/* .games-sidebar p.active {
+  background-color: #d32f2f;
+  color: white;
+  font-weight: bold;
+} */
+
+.games-container {
+  display: flex;
+}
+
+.categories {
+  width: 200px;
+  padding: 10px;
+  background: #222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categories button {
+  padding: 8px;
+  border: none;
+  background: #444;
+  color: white;
+  cursor: pointer;
+}
+
+.categories button.active {
+  background: red;
+}
+
+.games-list {
+  flex: 1;
+  padding: 10px;
+}
+
+.game-frame iframe {
+  width: 100%;
+  height: 500px;
 }

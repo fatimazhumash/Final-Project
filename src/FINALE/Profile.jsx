@@ -1,10 +1,7 @@
-// src/Profile.js
-
 import React, { useState } from 'react';
 import './Profile.css';
-import Modal from './Modal'; // Modal компонентін импорттаймыз
+import Modal from './Modal'; // Егер Modal бар болса
 
-// Тілдік сөздік
 const translations = {
   kk: {
     title: 'Менің профилім',
@@ -19,6 +16,7 @@ const translations = {
     publicMode: 'Қоғамдық режим',
     selectLanguage: 'Тілді таңдау:',
     viewMap: 'Картаны көру',
+    noPhoto: 'Сурет жоқ',
   },
   ru: {
     title: 'Мой профиль',
@@ -33,6 +31,7 @@ const translations = {
     publicMode: 'Публичный режим',
     selectLanguage: 'Выбрать язык:',
     viewMap: 'Посмотреть карту',
+    noPhoto: 'Нет фото',
   },
   en: {
     title: 'My Profile',
@@ -47,6 +46,7 @@ const translations = {
     publicMode: 'Public mode',
     selectLanguage: 'Select language:',
     viewMap: 'View Map',
+    noPhoto: 'No photo',
   },
 };
 
@@ -55,9 +55,9 @@ function Profile() {
   const [photo, setPhoto] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isPrivate, setIsPrivate] = useState(false);
-  const [language, setLanguage] = useState("kk");
+  const [language, setLanguage] = useState('kk');
   const [location, setLocation] = useState('');
-  const [selectedPlace, setSelectedPlace] = useState(null); // модал үшін
+  const [selectedPlace, setSelectedPlace] = useState(null);
 
   const t = translations[language];
 
@@ -84,28 +84,26 @@ function Profile() {
           setMenuOpen(false);
         },
         () => {
-          alert("Орналасқан жерді анықтау мүмкін болмады.");
+          alert(language === 'kk' ? "Орналасқан жерді анықтау мүмкін болмады." : language === 'ru' ? "Не удалось определить местоположение." : "Failed to get location.");
           setMenuOpen(false);
         }
       );
     } else {
-      alert("Бұл браузер геолокацияны қолдамайды.");
+      alert(language === 'kk' ? "Бұл браузер геолокацияны қолдамайды." : language === 'ru' ? "Этот браузер не поддерживает геолокацию." : "This browser does not support geolocation.");
       setMenuOpen(false);
     }
   };
 
-  // Картада көрсетілетін орын
-    const place = {
-    name: "Алматы",
-    region: "Алматы қаласы ",
-    description: "​Алмалинский район, , Улица Мауленова ,92.",
+  const place = {
+    name: language === 'kk' ? "Алматы" : language === 'ru' ? "Алматы" : "Almaty",
+    region: language === 'kk' ? "Алматы қаласы" : language === 'ru' ? "Город Алматы" : "City of Almaty",
+    description: language === 'kk' ? "​Алмалинский район, , Улица Мауленова ,92." : language === 'ru' ? "Алмалинский район, улица Мауленова, 92." : "Almalinsky district, Maulenova street, 92.",
     image: "https://2gis.kz/almaty/geo/9430047375018127",
     coordinates: {
       lat: 43.251588,
-      lng:  76.935242,
-    }
+      lng: 76.935242,
+    },
   };
-
 
   return (
     <div className="profile-container">
@@ -131,22 +129,28 @@ function Profile() {
 
       <div className="profile-content">
         {photo ? (
-          <img src={photo} alt="аватар" className="avatar" />
+          <img src={photo} alt="avatar" className="avatar" />
         ) : (
-          <div className="avatar-placeholder">Нет фото</div>
+          <div className="avatar-placeholder">{t.noPhoto}</div>
         )}
 
         <label>{t.name}:</label>
-        <input id="nameInput" className="name-input" value={name} onChange={(e) => setName(e.target.value)} />
+        <input
+          id="nameInput"
+          className="name-input"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
 
         <div className="settings">
           <label>
             <input type="checkbox" checked={isPrivate} onChange={() => setIsPrivate(!isPrivate)} />
             {t.privateMode}
           </label>
+
           {location && <p>📍 {t.location}: {location}</p>}
 
-          <div>
+          <div style={{ marginTop: '15px' }}>
             <label>{t.selectLanguage}</label>
             <select value={language} onChange={(e) => setLanguage(e.target.value)}>
               <option value="kk">Қазақша</option>
@@ -155,13 +159,13 @@ function Profile() {
             </select>
           </div>
 
-          <div style={{ marginTop: "20px" }}>
+          <div style={{ marginTop: '20px' }}>
             <button className="map-btn" onClick={() => setSelectedPlace(place)}>🗺️ {t.viewMap}</button>
           </div>
         </div>
       </div>
 
-      {/* Модал компонент */}
+      {/* Модал компоненті */}
       <Modal show={!!selectedPlace} onClose={() => setSelectedPlace(null)} place={selectedPlace} />
     </div>
   );

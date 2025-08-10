@@ -87,6 +87,7 @@ audio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+
 }
 
 .music-card {
@@ -119,7 +120,6 @@ audio {
 @media (max-width: 768px) {
   .music-sidebar {
     position: relative;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

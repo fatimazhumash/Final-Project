@@ -35,7 +35,7 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src="https://avatars.mds.yandex.net/i?id=8f2e2aa65138e65966b429c63d9d88bc8616e872-12537952-images-thumbs&n=13"
+              src="https://avatars.mds.yandex.net/i?id=fbca50028edf241fcf86a09f90b2235858b6a284-4080206-images-thumbs&n=13"
               alt="Subway Surfers"
               onClick={()=>navigate('/games')}
             />
@@ -43,7 +43,7 @@ function Home() {
           </div>
           <div className="card">
             <img
-              src="https://avatars.mds.yandex.net/i?id=6a4b39d6a4f3a476b872aa4b5c05f04e5c3c2365-12537954-images-thumbs&n=13"
+              src="https://avatars.mds.yandex.net/i?id=ccd932f27372eabbf5bc5dcadc14967f0079ab0b-5134183-images-thumbs&n=13"
               alt="Among Us"
               onClick={()=>navigate('/games')}
             />
@@ -70,12 +70,12 @@ function Home() {
            
           </div>
           <div className="card">
-            <img src="https://avatars.mds.yandex.net/i?id=aa0bff02f4f5f4abdb82f8c31dbfe152b95d1ac5-12537955-images-thumbs&n=13" alt="SpongeBob"   onClick={()=>navigate('/videos')}/>
+            <img src="https://avatars.mds.yandex.net/i?id=de84ccde8feaebaeba388c77c6e3dd0410f490e5-4234358-images-thumbs&n=13" alt="SpongeBob"   onClick={()=>navigate('/videos')}/>
             <p>SpongeBob SquarePants</p>
            
           </div>
           <div className="card">
-            <img src="https://avatars.mds.yandex.net/i?id=23db8d9fdff823e2c40f3fc4a4504969dcb3da23-12537956-images-thumbs&n=13" alt="Frozen"   onClick={()=>navigate('/videos')}/>
+            <img src="https://avatars.mds.yandex.net/i?id=69fe51987e538a6f8a2845bb86e45c9f53884427-5210240-images-thumbs&n=13" alt="Frozen"   onClick={()=>navigate('/videos')}/>
             <p>Frozen</p>
            
           </div>
@@ -100,12 +100,12 @@ function Home() {
             <p>BTS - Dynamite</p>
           </div>
           <div className="card">
-            <img src="https://avatars.mds.yandex.net/i?id=9ff4f08a71de5ef0970b4f7a255e1a60195b40f2-5236154-images-thumbs&n=13" alt="Perfect" onClick={()=>navigate('/musics')} />
+            <img src="https://avatars.mds.yandex.net/i?id=f5405af62c4527eca0e01b282552ad2c3fd3ea86-10805549-images-thumbs&n=13" alt="Perfect" onClick={()=>navigate('/musics')} />
               
             <p>Ed Sheeran - Perfect</p>
           </div>
           <div className="card">
-            <img src="https://avatars.mds.yandex.net/i?id=2af243eb3d9e4dd2cda5f9b38787cd876ad6f7c5-12537957-images-thumbs&n=13" alt="Someone Like You" onClick={()=>navigate('/musics')} />
+            <img src="https://avatars.mds.yandex.net/i?id=6828c2d7f69329649c0da3d23d9483c8ddf99e6c-5877309-images-thumbs&n=13" alt="Someone Like You" onClick={()=>navigate('/musics')} />
        
             <p>Adele - Someone Like You</p>
           </div>

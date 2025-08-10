@@ -1,306 +1,172 @@
-// import React from 'react';
-// import './Games.css'; 
-
-
-// function Games() {
-    
-//   return (
-//     <div className='Came'>
-    
-//   <div className='game' style={{}}> 
-        
-//         <h3>Категориялар</h3>
-//           <div className="game-type"> Карта</div>
-//         <div className="game-type"> Машина</div>
-//         <div className="game-type"> RPG</div>
-//         <div className="game-type">FPS</div>
-//         <div className="game-type"> Басқатырғыш</div>
-//         <div className="game-type"> Аркада</div>
-//        </div>
-       
-
-//         <div className='clasGame'>
-//        <h4>Рекомендованные игры:</h4>
-
-
-     
-//     <div className="games-container">
-   
-//   {/* 1 */}
-//       <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/96860"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=2ce64b300cd8288fc65e459bcf2e1a7a3975e95d-16412977-images-thumbs&n=13"
-//             alt="Fireboy & Watergirl 1 in The Forest Temple
-// "
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">Fireboy & Watergirl 1 in The Forest Temple
-// </p>
-//       </div>
-// {/* 2 */}
-//       <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/408697?utm_source=game_promo_catalog&yclid=3839940630083010559#app-id=408697&catalog-session-uid=catalog-22646492-f5cf-517c-a36f-a5af9491a1c8-1754111795757-e62a&rtx-reqid=8768466906836030819&pos=%7B%22listType%22%3A%22suggested%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22suggested%22%2C%22block_index%22%3A1%2C%22card%22%3A%22adaptive_recommended_new%22%2C%22col%22%3A0%2C%22first_screen%22%3A1%2C%22page%22%3A%22main%22%2C%22rn%22%3A999529696%2C%22row%22%3A0%2C%22rtx_reqid%22%3A%228768466906836030819%22%2C%22same_block_index%22%3A0%2C%22wrapper%22%3A%22grid-list%22%2C%22request_id%22%3A%221754111789715789-11289797297867351806-ethxjlj6qb4plbk2-BAL%22%2C%22games_request_id%22%3A%221754111789695232-5766504304827117083-balancer-l7leveler-kubr-yp-vla-205-BAL%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%253Fk50id%253D0100000052515917964_52515917964%2526etext%253D2202.OchUk0q2NwbPddCPZwaVYGlld3pocWhyYXZsYmlrY2Q.cf2c14ec3018e7087310cbc911dec291e9fca4bb%2526yclid%253D10334731222614278143%22%7D"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=bcb6c6183e0006bf68803d14a8e94857e654ac1a-12716743-images-thumbs&n=13"
-//             alt="Westland Survival"
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">Westland Survival</p>
-//       </div>
-// {/* 3 */}
-//       <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/263344#app-id=263344&catalog-session-uid=catalog-22646492-f5cf-517c-a36f-a5af9491a1c8-1754111795757-e62a&rtx-reqid=8768466906836030819&pos=%7B%22listType%22%3A%22suggested%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22suggested%22%2C%22block_index%22%3A1%2C%22card%22%3A%22adaptive_recommended_new%22%2C%22col%22%3A3%2C%22first_screen%22%3A0%2C%22page%22%3A%22main%22%2C%22rn%22%3A222977090%2C%22row%22%3A5%2C%22rtx_reqid%22%3A%228768466906836030819%22%2C%22same_block_index%22%3A0%2C%22wrapper%22%3A%22grid-list%22%2C%22request_id%22%3A%221754111789715789-11289797297867351806-ethxjlj6qb4plbk2-BAL%22%2C%22games_request_id%22%3A%221754111789695232-5766504304827117083-balancer-l7leveler-kubr-yp-vla-205-BAL%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%253Fk50id%253D0100000052515917964_52515917964%2526etext%253D2202.OchUk0q2NwbPddCPZwaVYGlld3pocWhyYXZsYmlrY2Q.cf2c14ec3018e7087310cbc911dec291e9fca4bb%2526yclid%253D10334731222614278143%22%7D"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=d5e08a2cee9ac80e9a801187c3fd5c39990de702-5905147-images-thumbs&n=13"
-//             alt="Red Ball 4
-// "
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">Red Ball 4
-// </p>
-//       </div>
-// {/* 4 */}
-//        <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/227352#app-id=227352&catalog-session-uid=catalog-22646492-f5cf-517c-a36f-a5af9491a1c8-1754111795757-e62a&rtx-reqid=8768466906836030819&pos=%7B%22listType%22%3A%22suggested%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22suggested%22%2C%22block_index%22%3A1%2C%22card%22%3A%22adaptive_recommended_new%22%2C%22col%22%3A1%2C%22first_screen%22%3A0%2C%22page%22%3A%22main%22%2C%22rn%22%3A248007707%2C%22row%22%3A3%2C%22rtx_reqid%22%3A%228768466906836030819%22%2C%22same_block_index%22%3A0%2C%22wrapper%22%3A%22grid-list%22%2C%22request_id%22%3A%221754111789715789-11289797297867351806-ethxjlj6qb4plbk2-BAL%22%2C%22games_request_id%22%3A%221754111789695232-5766504304827117083-balancer-l7leveler-kubr-yp-vla-205-BAL%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%253Fk50id%253D0100000052515917964_52515917964%2526etext%253D2202.OchUk0q2NwbPddCPZwaVYGlld3pocWhyYXZsYmlrY2Q.cf2c14ec3018e7087310cbc911dec291e9fca4bb%2526yclid%253D10334731222614278143%22%7D"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=67d1564397c258f2cb1a84f3c85c15e3299be5d9-5886829-images-thumbs&n=13"
-//             alt="Геометри Даш: Волна Челлендж"
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">Геометри Даш: Волна Челлендж</p>
-//       </div>
-//       {/* 5 */}
-//        <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/295738#app-id=295738&catalog-session-uid=catalog-22646492-f5cf-517c-a36f-a5af9491a1c8-1754111795757-e62a&rtx-reqid=8768466906836030819&pos=%7B%22listType%22%3A%22suggested%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22suggested%22%2C%22block_index%22%3A1%2C%22card%22%3A%22adaptive_recommended_new%22%2C%22col%22%3A3%2C%22first_screen%22%3A1%2C%22page%22%3A%22main%22%2C%22rn%22%3A570745498%2C%22row%22%3A1%2C%22rtx_reqid%22%3A%228768466906836030819%22%2C%22same_block_index%22%3A0%2C%22wrapper%22%3A%22grid-list%22%2C%22request_id%22%3A%221754111789715789-11289797297867351806-ethxjlj6qb4plbk2-BAL%22%2C%22games_request_id%22%3A%221754111789695232-5766504304827117083-balancer-l7leveler-kubr-yp-vla-205-BAL%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%253Fk50id%253D0100000052515917964_52515917964%2526etext%253D2202.OchUk0q2NwbPddCPZwaVYGlld3pocWhyYXZsYmlrY2Q.cf2c14ec3018e7087310cbc911dec291e9fca4bb%2526yclid%253D10334731222614278143%22%7D"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=d13d56d8ea0770160c9702d1b81e7961671c14dc-5605720-images-thumbs&n=13s"
-//             alt="ГТАРП: Дрифт на BMW M5 F90"
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">ГТАРП: Дрифт на BMW M5 F90</p>
-//       </div>
-//       {/* 6 */}
-//        <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/204598?utm_source=game_promo_catalog&yclid=17785456397746175999#app-id=204598&catalog-session-uid=catalog-22646492-f5cf-517c-a36f-a5af9491a1c8-1754111795757-e62a&rtx-reqid=8768466906836030819&pos=%7B%22listType%22%3A%22suggested%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22suggested%22%2C%22block_index%22%3A1%2C%22card%22%3A%22adaptive_recommended_new%22%2C%22col%22%3A3%2C%22first_screen%22%3A1%2C%22page%22%3A%22main%22%2C%22rn%22%3A153816412%2C%22row%22%3A0%2C%22rtx_reqid%22%3A%228768466906836030819%22%2C%22same_block_index%22%3A0%2C%22wrapper%22%3A%22grid-list%22%2C%22request_id%22%3A%221754111789715789-11289797297867351806-ethxjlj6qb4plbk2-BAL%22%2C%22games_request_id%22%3A%221754111789695232-5766504304827117083-balancer-l7leveler-kubr-yp-vla-205-BAL%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%253Fk50id%253D0100000052515917964_52515917964%2526etext%253D2202.OchUk0q2NwbPddCPZwaVYGlld3pocWhyYXZsYmlrY2Q.cf2c14ec3018e7087310cbc911dec291e9fca4bb%2526yclid%253D10334731222614278143%22%7D"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=648cbcb082cc24fca5143eae7ef58c26c7187337-13583247-images-thumbs&n=13s"
-//             alt="Дурак переводной"
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">Дурак переводной</p>
-//       </div>
-//       {/* 7 */}
-//        <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/183657?utm_source=game_promo_catalog&yclid=3162541720950013951#app-id=183657&catalog-session-uid=catalog-22646492-f5cf-517c-a36f-a5af9491a1c8-1754111795757-e62a&rtx-reqid=8768466906836030819&pos=%7B%22listType%22%3A%22suggested%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22suggested%22%2C%22block_index%22%3A3%2C%22card%22%3A%22adaptive_recommended_new%22%2C%22col%22%3A0%2C%22first_screen%22%3A0%2C%22page%22%3A%22main%22%2C%22rn%22%3A835394112%2C%22row%22%3A0%2C%22rtx_reqid%22%3A%228768466906836030819%22%2C%22same_block_index%22%3A1%2C%22wrapper%22%3A%22grid-list%22%2C%22request_id%22%3A%221754112213145481-11987108375160794519-fjc7wnwfqsoqdy2m-BAL%22%2C%22games_request_id%22%3A%221754112213132826-152780543606314157-balancer-l7leveler-kubr-yp-klg-264-BAL%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%253Fk50id%253D0100000052515917964_52515917964%2526etext%253D2202.OchUk0q2NwbPddCPZwaVYGlld3pocWhyYXZsYmlrY2Q.cf2c14ec3018e7087310cbc911dec291e9fca4bb%2526yclid%253D10334731222614278143%22%7D"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=f7503ae113fdc650fc6879709fac8aee6206c8a7-4666607-images-thumbs&n=13"
-//             alt="Пять Ночей у Фредди"
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">Пять Ночей у Фредди</p>
-//       </div>
-//       {/* 8 */}
-//        <div className="game-card">
-//         <a
-//           href="https://yandex.ru/games/app/295183#app-id=295183&catalog-session-uid=catalog-22646492-f5cf-517c-a36f-a5af9491a1c8-1754111795757-e62a&rtx-reqid=8768466906836030819&pos=%7B%22listType%22%3A%22suggested%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22suggested%22%2C%22block_index%22%3A5%2C%22card%22%3A%22adaptive_recommended_new%22%2C%22col%22%3A0%2C%22first_screen%22%3A0%2C%22page%22%3A%22main%22%2C%22rn%22%3A951062146%2C%22row%22%3A2%2C%22rtx_reqid%22%3A%228768466906836030819%22%2C%22same_block_index%22%3A2%2C%22wrapper%22%3A%22grid-list%22%2C%22request_id%22%3A%221754112213145481-11987108375160794519-fjc7wnwfqsoqdy2m-BAL%22%2C%22games_request_id%22%3A%221754112213132826-152780543606314157-balancer-l7leveler-kubr-yp-klg-264-BAL%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%253Fk50id%253D0100000052515917964_52515917964%2526etext%253D2202.OchUk0q2NwbPddCPZwaVYGlld3pocWhyYXZsYmlrY2Q.cf2c14ec3018e7087310cbc911dec291e9fca4bb%2526yclid%253D10334731222614278143%22%7D"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <img
-//             src="https://avatars.mds.yandex.net/i?id=79473a117a0565709a7dfdc8bc9e7a9c099159d7-5879907-images-thumbs&n=13"
-//             alt="Block Dropping Merge"
-//             className="game-image"
-//           />
-//         </a>
-//         <p className="game-title">Block Dropping Merge</p>
-//       </div>
-//     </div>
-//     </div>
-//     </div>
-//   );
-// }
-
-// export default Games;
-
-
-
-
-
 import React, { useState } from 'react';
-import './Videos.css';
-
-
-
-
-
+import './Games.css';
 
 const allGames = [
-  // Аркадалар (arc)
-  {
-    title: 'Red Ball',
-    url: 'https://yandex.ru/games/app/263344?lang=ru',
-    category: 'arc',
-  },
-  {
-    title: 'Geometry Dash Online',
-    url: 'https://geometry-dash.io/',
-    category: 'arc',
-  },
-  {
-    title: 'Fireboy & Watergirl',
-    url: 'https://www.crazygames.com/game/fireboy-and-watergirl-1-forest-temple',
-    category: 'arc',
-  },
-  {
-    title: 'Slope',
-    url: 'https://www.crazygames.com/game/slope',
-    category: 'arc',
-  },
-  {
-    title: 'Vex 6',
-    url: 'https://www.crazygames.com/game/vex-6',
-    category: 'arc',
-  },
+   // 1 — .io Games
+  { id: 1, title: 'Krunker.io', url: 'https://krunker.io/', category: 'io' },
+  { id: 2, title: 'Slither.io', url: 'https://slither.io/', category: 'io' },
+  { id: 3, title: 'Diep.io', url: 'https://diep.io/', category: 'io' },
+  { id: 4, title: 'Agar.io', url: 'https://agar.io/', category: 'io' },
+  { id: 5, title: 'Paper.io 2', url: 'https://paper-io.com/', category: 'io' },
+  { id: 6, title: 'Zombs.io', url: 'https://zombs.io/', category: 'io' },
+  { id: 7, title: 'Hole.io', url: 'https://hole-io.com/', category: 'io' },
+  { id: 8, title: 'Wormax.io', url: 'https://wormax.io/', category: 'io' },
+  { id: 9, title: 'Bonk.io', url: 'https://bonk.io/', category: 'io' },
+  { id: 10, title: 'Warbot.io', url: 'https://warbot.io/', category: 'io' },
 
-  // Машина ойындары (car)
-  {
-    title: 'Drift Hunters',
-    url: 'https://www.crazygames.com/game/drift-hunters',
-    category: 'car',
-  },
-  {
-    title: 'Madalin Stunt Cars 2',
-    url: 'https://www.crazygames.com/game/madalin-stunt-cars-2',
-    category: 'car',
-  },
-  {
-    title: 'City Car Driving Simulator',
-    url: 'https://www.crazygames.com/game/city-car-driving-simulator',
-    category: 'car',
-  },
-  {
-    title: 'Moto X3M',
-    url: 'https://www.crazygames.com/game/moto-x3m',
-    category: 'car',
-  },
-  {
-    title: 'Burnout Drift',
-    url: 'https://www.crazygames.com/game/burnout-drift',
-    category: 'car',
-  },
+  // 2 — Action
+  { id: 11, title: 'Bullet Force', url: 'https://www.crazygames.com/game/bullet-force-multiplayer', category: 'action' },
+  { id: 12, title: 'Venge.io', url: 'https://venge.io/', category: 'action' },
+  { id: 13, title: 'Forward Assault', url: 'https://www.crazygames.com/game/forward-assault', category: 'action' },
+  { id: 14, title: 'Stickman Fighter', url: 'https://www.crazygames.com/game/stickman-fighter-epic-battle', category: 'action' },
+  { id: 15, title: 'Combat Reloaded', url: 'https://www.crazygames.com/game/combat-reloaded', category: 'action' },
+  { id: 16, title: 'Masked Forces', url: 'https://www.crazygames.com/game/masked-forces', category: 'action' },
+  { id: 17, title: 'Temple of Boom', url: 'https://www.crazygames.com/game/temple-of-boom', category: 'action' },
+  { id: 18, title: 'Superhot', url: 'https://superhotgame.com/play-prototype', category: 'action' },
+  { id: 19, title: 'Stick War', url: 'https://www.crazygames.com/game/stick-war', category: 'action' },
+  { id: 20, title: 'Mini Royale: Nations', url: 'https://miniroyale.io/', category: 'action' },
 
-  // Карточка ойындары (card)
-  {
-    title: 'Solitaire',
-    url: 'https://www.solitr.com/',
-    category: 'card',
-  },
-  {
-    title: 'Uno Online',
-    url: 'https://www.crazygames.com/game/uno-online',
-    category: 'card',
-  },
-  {
-    title: 'Spider Solitaire',
-    url: 'https://spidersolitaire.pro/',
-    category: 'card',
-  },
-  {
-    title: 'FreeCell',
-    url: 'https://freecell.io/',
-    category: 'card',
-  },
-  {
-    title: 'Hearts',
-    url: 'https://cardgames.io/hearts/',
-    category: 'card',
-  },
+  // 3 — Adventure
+  { id: 21, title: 'Fireboy and Watergirl 1', url: 'https://www.crazygames.com/game/fireboy-and-watergirl-1-forest-temple', category: 'adventure' },
+  { id: 22, title: 'Fireboy and Watergirl 2', url: 'https://www.crazygames.com/game/fireboy-and-watergirl-2-light-temple', category: 'adventure' },
+  { id: 23, title: 'Fireboy and Watergirl 3', url: 'https://www.crazygames.com/game/fireboy-and-watergirl-3-ice-temple', category: 'adventure' },
+  { id: 24, title: 'Vex 6', url: 'https://www.crazygames.com/game/vex-6', category: 'adventure' },
+  { id: 25, title: 'Bob the Robber', url: 'https://www.crazygames.com/game/bob-the-robber', category: 'adventure' },
+  { id: 26, title: 'Red Ball 4', url: 'https://www.crazygames.com/game/red-ball-4', category: 'adventure' },
+  { id: 27, title: 'Adam and Eve', url: 'https://www.crazygames.com/game/adam-and-eve', category: 'adventure' },
+  { id: 28, title: 'Fancy Pants Adventure', url: 'https://fancypantsadventures.com/', category: 'adventure' },
+  { id: 29, title: 'Papa Louie 2', url: 'https://www.crazygames.com/game/papa-louie-2', category: 'adventure' },
+  { id: 30, title: 'Jungle Run', url: 'https://www.crazygames.com/game/jungle-run', category: 'adventure' },
+
+  // 4 — Arcade
+  { id: 31, title: 'Slope', url: 'https://www.crazygames.com/game/slope', category: 'arcade' },
+  { id: 32, title: 'Subway Surfers', url: 'https://subwaysurfersgame.io/', category: 'arcade' },
+  { id: 33, title: 'Temple Run 2', url: 'https://templerun2.io/', category: 'arcade' },
+  { id: 34, title: 'Pac-Man', url: 'https://pacman.live/', category: 'arcade' },
+  { id: 35, title: 'Helix Jump', url: 'https://helixjump.io/', category: 'arcade' },
+  { id: 36, title: 'Stack Ball', url: 'https://stackball.io/', category: 'arcade' },
+  { id: 37, title: 'Flappy Bird', url: 'https://flappybird.io/', category: 'arcade' },
+  { id: 38, title: 'Jetpack Joyride', url: 'https://jetpackjoyride.io/', category: 'arcade' },
+  { id: 39, title: 'Crossy Road', url: 'https://crossyroad.io/', category: 'arcade' },
+  { id: 40, title: 'Doodle Jump', url: 'https://doodlejump.io/', category: 'arcade' },
+
+  // 5 — Board
+  { id: 41, title: 'Chess', url: 'https://www.chess.com/play/computer', category: 'board' },
+  { id: 42, title: 'Checkers', url: 'https://cardgames.io/checkers/', category: 'board' },
+  { id: 43, title: 'Backgammon', url: 'https://cardgames.io/backgammon/', category: 'board' },
+  { id: 44, title: 'Ludo', url: 'https://ludo-king.com/', category: 'board' },
+  { id: 45, title: 'Dominoes', url: 'https://cardgames.io/dominoes/', category: 'board' },
+  { id: 46, title: 'Go Game', url: 'https://online-go.com/', category: 'board' },
+  { id: 47, title: 'Mahjong', url: 'https://mahjong.com/', category: 'board' },
+  { id: 48, title: 'Scrabble', url: 'https://playscrabble.com/', category: 'board' },
+  { id: 49, title: 'Carrom', url: 'https://carrom-club.com/', category: 'board' },
+  { id: 50, title: 'Reversi', url: 'https://cardgames.io/reversi/', category: 'board' },
+
+  // 6 — Card
+  { id: 51, title: 'Solitaire', url: 'https://www.solitr.com/', category: 'card' },
+  { id: 52, title: 'Uno Online', url: 'https://www.crazygames.com/game/uno-online', category: 'card' },
+  { id: 53, title: 'Spider Solitaire', url: 'https://spidersolitaire.pro/', category: 'card' },
+  { id: 54, title: 'FreeCell', url: 'https://freecell.io/', category: 'card' },
+  { id: 55, title: 'Hearts', url: 'https://cardgames.io/hearts/', category: 'card' },
+  { id: 56, title: 'Gin Rummy', url: 'https://cardgames.io/ginrummy/', category: 'card' },
+  { id: 57, title: 'Poker', url: 'https://www.pokerstars.net/', category: 'card' },
+  { id: 58, title: 'Blackjack', url: 'https://cardgames.io/blackjack/', category: 'card' },
+  { id: 59, title: 'Bridge', url: 'https://cardgames.io/bridge/', category: 'card' },
+  { id: 60, title: 'Crazy Eights', url: 'https://cardgames.io/crazyeights/', category: 'card' },
+
+  // 7 — Racing
+  { id: 61, title: 'Drift Hunters', url: 'https://www.crazygames.com/game/drift-hunters', category: 'racing' },
+  { id: 62, title: 'Madalin Stunt Cars 2', url: 'https://www.crazygames.com/game/madalin-stunt-cars-2', category: 'racing' },
+  { id: 63, title: 'City Car Driving Simulator', url: 'https://www.crazygames.com/game/city-car-driving-simulator', category: 'racing' },
+  { id: 64, title: 'Moto X3M', url: 'https://www.crazygames.com/game/moto-x3m', category: 'racing' },
+  { id: 65, title: 'Burnout Drift', url: 'https://www.crazygames.com/game/burnout-drift', category: 'racing' },
+  { id: 66, title: 'Highway Racer', url: 'https://www.crazygames.com/game/highway-racer', category: 'racing' },
+  { id: 67, title: 'Formula Fever', url: 'https://www.crazygames.com/game/formula-fever', category: 'racing' },
+  { id: 68, title: 'Extreme Drift', url: 'https://www.crazygames.com/game/extreme-drift', category: 'racing' },
+  { id: 69, title: 'Offroader V6', url: 'https://www.crazygames.com/game/offroader-v6', category: 'racing' },
+  { id: 70, title: 'Traffic Racer', url: 'https://www.crazygames.com/game/traffic-racer', category: 'racing' },
+
+  // 8 — Sports
+  { id: 71, title: 'Basketball Stars', url: 'https://www.crazygames.com/game/basketball-stars', category: 'sports' },
+  { id: 72, title: 'Soccer Legends', url: 'https://www.crazygames.com/game/soccer-legends-2021', category: 'sports' },
+  { id: 73, title: '8 Ball Pool', url: 'https://www.miniclip.com/games/8-ball-pool-multiplayer/en/', category: 'sports' },
+  { id: 74, title: 'Tennis Masters', url: 'https://www.crazygames.com/game/tennis-masters', category: 'sports' },
+  { id: 75, title: 'Hockey Legends', url: 'https://www.crazygames.com/game/hockey-legends', category: 'sports' },
+  { id: 76, title: 'Mini Golf Club', url: 'https://www.crazygames.com/game/mini-golf-club', category: 'sports' },
+  { id: 77, title: 'Penalty Shooters 2', url: 'https://www.crazygames.com/game/penalty-shooters-2', category: 'sports' },
+  { id: 78, title: 'Golf Battle', url: 'https://www.crazygames.com/game/golf-battle', category: 'sports' },
+  { id: 79, title: 'Table Tennis World Tour', url: 'https://www.crazygames.com/game/table-tennis-world-tour', category: 'sports' },
+  { id: 80, title: 'Dunkers', url: 'https://www.crazygames.com/game/dunkers', category: 'sports' },
+
+  // 9 — Strategy
+  { id: 81, title: 'Clash of Armour', url: 'https://www.crazygames.com/game/clash-of-armour', category: 'strategy' },
+  { id: 82, title: 'Tower Defense', url: 'https://www.crazygames.com/game/cursed-treasure', category: 'strategy' },
+  { id: 83, title: 'Stick War Legacy', url: 'https://www.crazygames.com/game/stick-war', category: 'strategy' },
+  { id: 84, title: 'Bloons Tower Defense', url: 'https://bloonsworld.com/', category: 'strategy' },
+  { id: 85, title: 'Kingdom Rush', url: 'https://www.crazygames.com/game/kingdom-rush', category: 'strategy' },
+  { id: 86, title: 'Age of War', url: 'https://www.crazygames.com/game/age-of-war', category: 'strategy' },
+  { id: 87, title: 'Battle for the Galaxy', url: 'https://www.crazygames.com/game/battle-for-the-galaxy', category: 'strategy' },
+  { id: 88, title: 'Goodgame Empire', url: 'https://empire.goodgamestudios.com/', category: 'strategy' },
+  { id: 89, title: 'Plants vs Zombies', url: 'https://www.crazygames.com/game/plants-vs-zombies', category: 'strategy' },
+  { id: 90, title: 'War Simulator', url: 'https://www.crazygames.com/game/war-simulator', category: 'strategy' },
+
+  // 10 — Puzzle
+  { id: 91, title: 'Cut the Rope', url: 'https://www.crazygames.com/game/cut-the-rope', category: 'puzzle' },
+  { id: 92, title: '2048', url: 'https://play2048.co/', category: 'puzzle' },
+  { id: 93, title: 'Sudoku', url: 'https://sudoku.com/', category: 'puzzle' },
+  { id: 94, title: 'Candy Crush', url: 'https://candycrushsaga.com/', category: 'puzzle' },
+  { id: 95, title: 'Jigsaw Puzzle', url: 'https://www.crazygames.com/game/jigsaw-puzzle', category: 'puzzle' },
+  { id: 96, title: 'Logic Master', url: 'https://www.crazygames.com/game/logic-master', category: 'puzzle' },
+  { id: 97, title: 'Escape Room', url: 'https://www.crazygames.com/game/escape-room', category: 'puzzle' },
+  { id: 98, title: 'Tetris', url: 'https://tetris.com/play-tetris', category: 'puzzle' },
+  { id: 99, title: 'Unblock Me', url: 'https://www.crazygames.com/game/unblock-me', category: 'puzzle' },
+  { id: 100, title: 'Word Search', url: 'https://thewordsearch.com/', category: 'puzzle' },
+
 ];
 
+function Games() {
+const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedGame, setSelectedGame] = useState(null);
 
+  // Бірегей категориялар тізімі
+  const categories = ['all', ...new Set(allGames.map(g => g.category))];
 
-function Videos() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const filtered = selectedCategory === 'all'
-    ? allGames
-    : allGames.filter((item) => item.category === selectedCategory);
+  const filteredGames =
+    selectedCategory === 'all'
+      ? allGames
+      : allGames.filter(g => g.category === selectedCategory);
 
   return (
-    <div className="games-wrapper">
-      <div className="games-sidebar" style={{margin:"10px"}}>
-        <h3>Категориялар</h3>
-        <p onClick={() => setSelectedCategory('all')}>all</p>
-        <p onClick={() => setSelectedCategory('card')}>card</p>
-        <p onClick={() => setSelectedCategory('car')}>car</p>
-        <p onClick={() => setSelectedCategory('arc')}>arc</p>
+   <div className="games-container">
+      {/* Сол жақтағы категориялар */}
+      <div className="sidebar">
+        {categories.map(cat => (
+          <button
+            key={cat}
+            className={cat === selectedCategory ? 'active' : ''}
+            onClick={() => setSelectedCategory(cat)}
+          >
+            {cat.toUpperCase()}
+          </button>
+        ))}
       </div>
 
-      <div className="games-main">
-        <h4>Ұсынылған games:</h4>
-        <div className="cartoon-container">
-          {filtered.map((item, index) => (
-            <div className="games-card" key={index}>
-              <iframe
-                width="100%"
-                height="200"
-                src={item.url}
-                title={item.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <p className="games-title">{item.title}</p>
-            </div>
-          ))}
-        </div>
+      {/* Оң жақтағы ойындар */}
+      <div className="games-list">
+        {filteredGames.map((game, index) => (
+          <iframe
+            key={index}
+            src={game.url}
+            title={game.title}
+            style={{ width: '600px', height: '400px', border: 'none' }}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
-export default Videos;
-
-
-
-
-
+export default Games;
 
 
 

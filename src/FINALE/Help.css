@@ -1,0 +1,21 @@
+.help-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.help-container h1 {
+  color: #d32f2f;
+}
+
+.help-container h2 {
+  margin-top: 20px;
+  color: #444;
+}
+
+.help-container p, 
+.help-container li {
+  font-size: 16px;
+  line-height: 1.5;
+}
