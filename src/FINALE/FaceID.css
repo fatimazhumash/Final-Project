@@ -41,28 +41,3 @@
   font-size: 14px;
   color: #555;
 }
-.faceid-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f0f0f0; 
-}
-
-.faceid-box {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 60%; 
-  max-width: 600px;
-}
-
-
-@media (max-width: 768px) {
-  .faceid-box {
-    width: 100%; 
-    border-radius: 0; 
-    height: 100vh; 
-    max-width: none;
-  }
-}
