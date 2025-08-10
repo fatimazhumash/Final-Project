@@ -1,5 +1,5 @@
 
-/* 🔁 Адаптивтілік үшін */
+
 @media (max-width: 768px) {
   .game-video-nav {
     flex-direction: column;
@@ -87,7 +87,6 @@ input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-/* Light / Dark режимдері */
 body.dark-mode {
   --nav-bg: #121212;
   --nav-text: #ffffff;

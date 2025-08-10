@@ -1,29 +1,4 @@
 
-
-// import { Link } from "react-router-dom";
-// import './GameVideoNav.css';
-
-// function GameVideoNav() {
-//   return (
-//     <div className="game-video-nav">
-//       <Link to="/home" className="nav-link">AllOne</Link>
-//       <Link to="/games" className="nav-link">Games</Link>
-//       <Link to="/videos" className="nav-link">Cartoons</Link>
-//       <Link to="/musics" className="nav-link">Musics</Link>
-//       <Link to="/profile" className="nav-link">Profile</Link>
-//       <Link to="/search" className="nav-link">Search</Link>
-      
-//     </div>
-//   );
-// }
-
-// export default GameVideoNav;
-
-
-
-
-
-
 import { Link } from "react-router-dom";
 import './GameVideoNav.css';
 
@@ -34,7 +9,7 @@ function GameVideoNav({ darkMode, toggleTheme }) {
 
 
 
-       {/* Ортасы: AllOne, Games, Videos, Musics */}
+    
       <div className="nav-section-center">
         <Link to="/home" className="nav-link">AllOne</Link>
         <Link to="/games" className="nav-link">Games</Link>
@@ -44,7 +19,7 @@ function GameVideoNav({ darkMode, toggleTheme }) {
 
 
       
-      {/* Сол жақ: Профиль, Іздеу, Dark/Light */}
+     
       <div className="nav-section-left">
         <Link to="/profile" className="nav-link">Profile</Link>
         <Link to="/search" className="nav-link">Search</Link>

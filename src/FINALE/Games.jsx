@@ -128,7 +128,7 @@ function Games() {
 const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedGame, setSelectedGame] = useState(null);
 
-  // Бірегей категориялар тізімі
+
   const categories = ['all', ...new Set(allGames.map(g => g.category))];
 
   const filteredGames =
@@ -138,7 +138,7 @@ const [selectedCategory, setSelectedCategory] = useState('all');
 
   return (
    <div className="games-container">
-      {/* Сол жақтағы категориялар */}
+   
       <div className="sidebar">
         {categories.map(cat => (
           <button
@@ -151,7 +151,7 @@ const [selectedCategory, setSelectedCategory] = useState('all');
         ))}
       </div>
 
-      {/* Оң жақтағы ойындар */}
+  
       <div className="games-list">
         {filteredGames.map((game, index) => (
           <iframe

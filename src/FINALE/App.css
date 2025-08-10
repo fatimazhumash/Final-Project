@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0d0d0d; /* Қара фон */
+  background-color: #0d0d0d; 
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -15,7 +15,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #1a1a1a; /* Қаралау фон */
+  background-color: #1a1a1a; 
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
@@ -24,7 +24,7 @@ body {
 }
 
 .navbar a {
-  color: #b388ff; /* Күлгін түсті иконка немесе текст */
+  color: #b388ff; 
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
@@ -37,7 +37,7 @@ body {
 /* Бөлімдер */
 .section {
   padding: 20px;
-  margin-bottom: 70px; /* Навбармен жабылып қалмау үшін */
+  margin-bottom: 70px; 
 }
 
 /* Батырма */
@@ -55,7 +55,7 @@ button:hover {
   background-color: #9575cd;
 }
 
-/* Input (іздеу, логин, тіркелу) */
+
 input {
   background-color: #2e2e2e;
   color: white;
@@ -69,7 +69,7 @@ input::placeholder {
   color: #999;
 }
 
-/* Card-style (контенттерге) */
+
 .card {
   background-color: #1f1f1f;
   border-radius: 16px;
@@ -78,7 +78,7 @@ input::placeholder {
   box-shadow: 0 4px 8px rgba(179, 136, 255, 0.2);
 }
 
-/* Chat bubbles */
+
 .message {
   background-color: #3e2f5b;
   color: white;
@@ -88,13 +88,13 @@ input::placeholder {
   max-width: 70%;
 }
 
-/* Right side message */
+
 .message.right {
   background-color: #7e57c2;
   margin-left: auto;
 }
 
-/* Left side message */
+
 .message.left {
   background-color: #4a148c;
   margin-right: auto;

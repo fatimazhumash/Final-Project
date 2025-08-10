@@ -15,18 +15,18 @@ function Login() {
   }
 
   try {
-    // 1. Получаем всех пользователей
+
     const response = await fetch('https://6892e0fdc49d24bce86898c9.mockapi.io/users');
     const users = await response.json();
 
-    // 2. Проверяем, есть ли пользователь с такими данными
+ 
     const matchedUser = users.find(
       (user) => user.email === email && user.password === password
     );
 
     if (matchedUser) {
       // 3. Успешный логин
-      localStorage.setItem("userToken", matchedUser.id); // В MockAPI нет token, можно сохранить id
+      localStorage.setItem("userToken", matchedUser.id); 
       localStorage.setItem("userEmail", matchedUser.email);
       setError("");
       alert("Логин сәтті өтті!");
